@@ -1,0 +1,5 @@
+# formattage
+https://realpython.com/python-f-strings/
+https://python.doctor/ 
+https://docs.python.org/fr/3/tutorial/datastructures.html
+https://python.doctor/page-apprendre-conditions-structures-conditionnelles-if-else-python-cours-debutant
