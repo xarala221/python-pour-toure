@@ -1,0 +1,29 @@
+TP1
+
+
+Voici une liste de transaction :
+
+transaction_list = [250, 12, 45, 32, 23, 25, 250, 12]
+
+Tâche 1:
+Ecris un programme qui fait la somme des transactions.
+Tâche 2:
+Afficher la 5eme transaction 
+ Tâche 3:
+Ordonner la liste
+Tâche 5:
+Afficher la transaction la plus petite
+Tâche 6:
+Afficher la dernière transaction
+Tâche 7:
+Supprimer les transactions dupliquées
+Tâche 8:
+Supprimer la dernière transaction
+Tâche 9:
+Créer une copie des transactions
+Tâche 10:
+Ecris un programme qui fait la moyennes des transactions.
+Tâche 11:
+Ajouter +1 à chaque transaction
+Tâche 12:
+Afficher les transactions paires
