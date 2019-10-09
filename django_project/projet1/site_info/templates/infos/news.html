@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+
+{% block header %}
+<h2 class="text-center">Votre site d'actualite</h2>
+{% endblock %}
+
+
+{% block contenu %}
+<div class="row mt-2">
+  <div class="col-md-8">
+    <h4>
+      <a href="{% url 'new_article' %}" class="btn btn-info">Nouveau post</a>
+    </h4>
+    {% if articles %}
+
+    {% for article in articles %}
+
+    <div class="card mt-2">
+      <div class="card-body">
+        <h5 class="card-title"><a href="{% url 'details' article.id %}">{{ article.titre }}</a> </h5>
+        <h6 class="card-subtitle mb-2 text-muted">Auteur : {{ article.auteur }} <br> date :
+          {{ article.date_creation|date:"Y-m-d" }}
+        </h6>
+        <p class="card-text">{{ article.contenu|safe|truncatewords:10 }}.</p>
+        <a href="{% url 'details' article.id %}" class="card-link btn btn-outline-primary">Voir plus</a>
+        <a href="{% url 'delete_article' article.id %}" class="card-link btn btn-danger">Supprimer</a>
+        <!-- <a href="#" class="card-link">Another link</a> -->
+      </div>
+    </div>
+    {% endfor %}
+
+
+    {% else %}
+
+    <p>Pas d'articles</p>
+
+    {% endif %}
+
+
+  </div>
+  <div class="col-md-4">
+    <aside>
+      <h5>Inscrivez-vous</h5>
+    </aside>
+  </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+
+{% block header %}
+<!-- <h2>Votre site d'actualite</!-->
+{% endblock %}
+
+
+{% block contenu %}
+<div class="row">
+  <div class="col-md-8 col-offset-4 mt-2">
+    <h2> Supprimer article :{{ article.titre }}</h2>
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-group">
+        {{ message }}
+      </div>
+      <button class="btn btn-danger" type="submit">Supprimer</button>
+    </form>
+  </div>
+</div>
+</div>
+
+
+
+
+{% endblock %}

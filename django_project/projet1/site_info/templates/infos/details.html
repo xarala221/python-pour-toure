@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block header %}
+<!-- <h2>Votre site d'actualite</!-->
+{% endblock %}
+
+
+{% block contenu %}
+<div class="row">
+  <div class="col-md-8 col-offset-4 mt-2">
+    <h2> {{ article.titre }} </h2>
+    <p>{{ article.contenu|safe }}.</p>
+    <p>Auteur : {{ article.auteur }} | date : {{ article.date_creation }}</p>
+    <div class="footer-button">
+      <a class="btn btn-info" href="{% url 'news' %}">Retour</a>
+
+      {% if request.user.is_authenticated and request.user.is_superuser %}
+      <a href="{% url 'edit_article' article.id %}" class="btn btn-primary">Modifier</a>
+      {% endif %}
+
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}
