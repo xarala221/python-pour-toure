@@ -1,0 +1,20 @@
+1-Creer et activer notre environnement virtuel 
+	- pipenv shell
+2- Installer Django
+	- pipenv install django
+3- Creer nouveau projet
+	- django-admin startproject <nom_projet>
+4- Tester l'application
+	- python manage.py runserver
+5- Lancer les migrations
+	- python manage.py migrate
+6- Creer super utilisateur
+	- python manage.py createsuperuser
+7- Creer notre premiere application
+	- python manage.py startapp <nom_application>
+8- Ajouter l'application a la liste des application
+	- dans settings.py sous INSTALLED_APP, ajoute <nom_app>
+9- Creer les tables necessaires
+	- dans votre application, creer les tables
+
+

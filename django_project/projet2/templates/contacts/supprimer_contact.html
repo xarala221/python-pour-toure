@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block titre %}
+Surimmer
+{% endblock %}
+
+{% block contenu %}
+<div class="row">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <form method="POST"> {% csrf_token %}
+        <h4>Etes-vous sur de supprimer {{ contact }}</h4>
+
+        <button type="submit" class="btn btn-danger ">Oui</button>
+        <a href="{% url 'contacts' %}" class="btn btn-primary">Annuler</a>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

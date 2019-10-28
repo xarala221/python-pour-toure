@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block titre %}
+{{ contact }}
+{% endblock %}
+
+{% block contenu %}
+<div class="row">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">{{ contact.phone }}</li>
+        <li class="list-group-item">{{ contact.email|default_if_none:"non renseigne" }}</li>
+        <li class="list-group-item">{{ contact.auteur }}</li>
+      </ul>
+      <div class="mt-2">
+        <a href="{% url 'modifier' contact.id %}" class="btn btn-primary">Modfier</a>
+        <a href="{% url 'supprimer' contact.id %}" class="btn btn-danger">Supprimer</a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
