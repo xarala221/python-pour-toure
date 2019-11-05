@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block titre %}
+
+{% endblock %}
+{% block contenu %}
+<div class="mt-2">
+  <form method="POST"> {% csrf_token %}
+    <div class="form-group">
+      {{ form.as_p }}
+    </div>
+    <button type="submit" class="btn btn-primary">Inscription</button>
+  </form>
+  <p>Deja inscrit ? ? <a href="{% url 'login' %}">Connexion</a> </p>
+</div>
+{% endblock %}

@@ -16,13 +16,46 @@
 
 <body>
 
-  <h1 class="text-center">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'index' %}">Contacts</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'index' %}">Accueil</a> </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contacts' %}">Contacts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">A propos</a>
+          </li>
+          <li class="nav-item">
+            {% if request.user.is_authenticated %} <a class="nav-link" href="{% url 'logout' %}">Deconnexion</a>
+            {% else %} <a class="nav-link" href="{% url 'login' %}">Connexion</a>
+            {% endif  %}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    {% block titre %}
 
-    {% endblock %}
+  {% block titre %}
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Gestion de contacts</h1>
+      <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    </div>
+  </div>
+  {% endblock %}
 
-  </h1>
+
+
+
 
   <div class="container">
 
