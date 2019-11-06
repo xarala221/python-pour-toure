@@ -1,5 +1,9 @@
-from django.urls import path
+from django.urls import path, include
+from rest_framework import routers
 from . import views
+from . import api
+router = routers.DefaultRouter()
+router.register("api/contacts", api.ContactViewSet, basename="contacts")
 
 urlpatterns = [
     path("", views.index, name="index"),
@@ -9,4 +13,5 @@ urlpatterns = [
     path("contacts/<int:id>/modifier/", views.modifier_contact, name="modifier"),
     path("contacts/<int:id>/supprimer/",
          views.supprimer_contact, name="supprimer"),
+    path("", include(router.urls)),
 ]
