@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
 
 {% block titre %}
-Liste des contacts
+
 {% endblock %}
 
 {% block contenu %}
+<div class="m-2">
+  <a href="{% url 'nouveau' %}" class="btn btn-primary">Ajouter contact</a>
+</div>
 <div class="row">
   <div class="col-md-6 m-auto">
     <div class="card card-body">

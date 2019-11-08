@@ -6,7 +6,10 @@ from .models import Contact
 
 
 def index(request):
-    return render(request, "contacts/index.html")
+    return render(request, "pages/index.html")
+
+def about(request):
+    return render(request, "pages/about.html")
 
 # afficher la liste des contacts
 @login_required(login_url="/login/")

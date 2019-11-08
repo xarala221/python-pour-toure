@@ -1,0 +1,36 @@
+{
+  "editor.fontFamily": "'Operator Mono', Monaco, Menlo, Consolas, 'Courier New', monospace  ",
+  "git.ignoreLimitWarning": true,
+  "editor.formatOnSave": true,
+  "python.linting.pycodestyleEnabled": true,
+  "python.linting.pylintPath": "/home/hackerpro/.local/share/virtualenvs/projet2-dTX36feI/bin/autopep8",
+  "python.linting.pylintArgs": [
+    "--load-plugins",
+    "pylint_django"
+  ],
+  "python.linting.pylintEnabled": false,
+  "python.pythonPath": "/home/hackerpro/.local/share/virtualenvs/projet2-dTX36feI/bin/python",
+  "editor.fontSize": 16,
+  "python.linting.enabled": true,
+  "editor.tabSize": 2,
+  "python.jediEnabled": false,
+  "workbench.colorTheme": "Mirage",
+  "window.zoomLevel": 1,
+  "workbench.iconTheme": "material-icon-theme",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDelete": false,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.pyc": true
+  },
+  "files.watcherExclude": {
+    "**/__pycache__": true,
+    "**/.pyc": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true
+  },
+}
